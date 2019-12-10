@@ -35,7 +35,7 @@ int Messages::writeNormal(string filename, int var)
 	return 0;
 }
 int Messages::readNormal(string filename)
-{
+{ 
 	string norm;
 	ifstream inputFile;
 	inputFile.open(filename, ios::in);

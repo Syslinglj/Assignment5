@@ -12,10 +12,10 @@ int main()
 
 	cout << " Would you like to (E)ncrypt a file, (D)ecrypt a file or (Q)uit." << endl;
 	cin >> input;
-	
+	//begins loop until quit
 	while (input != 'q' && input != 'Q')
 	{
-		if (input != 'e' && input != 'E')
+		if (input != 'e' && input != 'E')// looks for incorrect values entered and repeats
 		{
 			if (input != 'd' && input != 'D')
 			{
@@ -24,7 +24,7 @@ int main()
 				cin >> input;
 			}
 		}
-		if (input == 'e' || input == 'E')
+		if (input == 'e' || input == 'E') // encrypts the txt file
 		{
 			cout << "Please enter the file directory location of the file you would like to encrypt. Must double ""\\"" symbols. " << endl;
 			cin >> directory;
@@ -33,7 +33,7 @@ int main()
 			myMessages.readNormal(directory);
 			myMessages.writeEncrypted(directory, mod);
 		}
-		if (input == 'd' || input == 'D')
+		if (input == 'd' || input == 'D') // decrypts the txt file
 		{
 			cout << "Please enter the file directory location of the file you would like to decrypt. Must double ""\\"" symbols. " << endl;
 			cin >> directory;
